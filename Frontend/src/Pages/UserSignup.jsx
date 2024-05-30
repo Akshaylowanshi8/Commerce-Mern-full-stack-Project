@@ -41,7 +41,7 @@ axios.post(url,formData)
         }
       };
     return(<>
-<div className="bg-gradient-to-br from-blue-500 to-cyan-500 ">
+<div className="">
 
 
 <div className=" flex justify-center items-center ">
