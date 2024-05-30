@@ -21,8 +21,6 @@ const Mobiles=()=>{
               }, []);
            let AllPro = AllProduct.map((key)=>{
                 return(<>
-    
-    
     <div class="bg-white rounded-lg  hover:shadow-2xl shadow-black  p-8 scale-[0.85]">
                     <div class="relative overflow-hidden  ">
                         <img class="object-cover w-full bg-white h-full" src={key.Imgurl} alt="Product" />
@@ -33,7 +31,6 @@ const Mobiles=()=>{
                     <div class="flex items-center justify-between mt-10 ">
                         <span class="text-gray-900 font-bold text-lg">₹{key.Price} </span>
                         <button class="bg-violet-600 text-white py-3  px-5 rounded-sm font-bold hover:bg-violet-950"
-                        
                         onClick={
                     ()=>{dispatch(addtocart({
                         id:key._id,
@@ -45,11 +42,7 @@ const Mobiles=()=>{
                         }))}}
                         >Add to Cart</button>
                     </div>
-                </div>
-    
-    
-    
-            
+                </div>        
                 </>)
               }
               )
@@ -58,7 +51,7 @@ const Mobiles=()=>{
     
     <div class=" bg-amber-300 py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-stone-900 mb-8">Introducing Featured Products</h2>
+            <h2 class="text-3xl font-bold text-stone-900 mb-8">Introducing our Mobiles</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
              {AllPro}
           

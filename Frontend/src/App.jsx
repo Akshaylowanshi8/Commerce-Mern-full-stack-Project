@@ -27,6 +27,7 @@ import ShopbyCatagry from './Pages/ShopbyCatagry';
 import Mobiles from './Pages/shopbycategry/mobile';
 import Headphones from './Pages/shopbycategry/headphone';
 import Laptop from './Pages/shopbycategry/Laptop';
+import Contect from './Pages/Contect';
 
 
 const App=()=> {
@@ -44,6 +45,7 @@ return (
   <Route path='home' element={ <Home />}/>
   <Route path='shop' element={ <Shop />}/>
   <Route path='about' element={ <About />}/> 
+  <Route path='Contect'element={<Contect />}/>
   <Route path='cart' element={<Cart />} />
   <Route path='allbrands' element={<AllBrands />} />
   <Route path='ShopbyCatagry' element={<ShopbyCatagry />}>
@@ -53,8 +55,6 @@ return (
       <Route path='mobile'element={<Mobiles/>} />
       <Route path='laptop'element={<Laptop />} />
       <Route path='headphone'element={<Headphones/>} />
-
-
 
   </Route>
 

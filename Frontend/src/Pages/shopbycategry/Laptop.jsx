@@ -57,7 +57,7 @@ const Laptop=()=>{
     
     <div class=" bg-amber-300 py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-stone-900 mb-8">Introducing Featured Products</h2>
+            <h2 class="text-3xl font-bold text-stone-900 mb-8">Introducing Our Laptops</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
              {AllPro}
           

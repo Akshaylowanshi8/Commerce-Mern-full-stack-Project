@@ -101,27 +101,27 @@ return(<>
       <h1 class="text-2xl font-bold mb-6">Shipping Address</h1>
       <div className="">
         <label htmlFor="fullName" className="block text-gray-700 dark:text-white mb-1">Full Name</label>
-        <input type="text" id="fullName" name="fullName" value={formData.fullName} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
+        <input type="text" required id="fullName" name="fullName" value={formData.fullName} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
       </div>
       <div className="mb-4">
-        <label htmlFor="address" className="block text-gray-700 dark:text-white mb-1">Address</label>
-        <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
+        <label htmlFor="address"  className="block text-gray-700 dark:text-white mb-1">Address</label>
+        <input type="text" required id="address" name="address" value={formData.address} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
       </div>
       <div className="mb-4">
         <label htmlFor="city" className="block text-gray-700 dark:text-white mb-1">City</label>
-        <input type="text" id="city" name="city" value={formData.city} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
+        <input type="text" required id="city" name="city" value={formData.city} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
       </div>
       <div className="mb-4">
         <label htmlFor="state" className="block text-gray-700 dark:text-white mb-1">state</label>
-        <input type="text" id="state" name="state" value={formData.state} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
+        <input type="text" required id="state" name="state" value={formData.state} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
       </div>
       <div className="mb-4">
         <label htmlFor="pinCode" className="block text-gray-700 dark:text-white mb-1">Pin Code</label>
-        <input type="text" id="pinCode" name="pinCode" value={formData.pinCode} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
+        <input type="text" required id="pinCode" name="pinCode" value={formData.pinCode} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
       </div>
       <div className="mb-4">
         <label htmlFor="mobile" className="block text-gray-700 dark:text-white mb-1">Mobile</label>
-        <input type="text" id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
+        <input type="text" required id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
       </div>
     </div>
       </div>
@@ -154,9 +154,5 @@ return(<>
 </div>
       </div>
 </>)
-
-
 }
-
-
 export default Chackout;

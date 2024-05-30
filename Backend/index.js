@@ -21,7 +21,8 @@ app.use(bodyparser.json())
 mongoose.connect(process.env.DataBase)
 .then(console.log(" datbase connected "));
 
-
+const Mailrouter = require("./Routes/Nodemailerfromcontect");
+app.use("/send",Mailrouter)
 const paymentRoute =require("./Routes/paymentRoute");
 app.use( "/payment",paymentRoute)
 

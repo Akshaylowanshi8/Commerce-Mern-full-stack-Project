@@ -77,6 +77,8 @@ return(
    <li className=""><Link to="SmartWatchs">Smart Watchs</Link></li> 
    <li className=""><Link to="NewArrivals">New Arrivals</Link></li> 
    <li className=""><Link to="about">About us</Link></li> 
+   <li className=""><Link to="Contect">Contect us</Link></li> 
+
    <li className=""><Link to="allbrands">All Brands</Link></li> 
    </ul>
     </div>
