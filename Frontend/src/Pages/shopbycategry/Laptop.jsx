@@ -5,6 +5,9 @@ import { useSelector,useDispatch } from "react-redux";
 
 const Laptop=()=>{
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     const dispatch=useDispatch();
     const mydata= useSelector((state)=>state.cartProduct.cart)

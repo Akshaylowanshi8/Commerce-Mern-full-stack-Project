@@ -17,7 +17,6 @@ const Home=()=> {
   const dispatch=useDispatch();
   const mydata= useSelector((state)=>state.cartProduct.cart)
 
-
   const [swiperRef, setSwiperRef] = useState(null);
   let appendNumber = 4;
   let prependNumber = 1;
@@ -241,7 +240,7 @@ return(<>
 
 {/* --------------------products------------------- */}
 
-<div class=" bg-amber-300 py-16">
+<div class=" bg-purple-500 py-16">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold  text-stone-900 mb-8">Introducing Featured Products</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

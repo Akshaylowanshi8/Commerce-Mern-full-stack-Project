@@ -1,5 +1,10 @@
+import { useEffect } from "react";
 
 const AllBrands=()=>{
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 return(
     <>
 

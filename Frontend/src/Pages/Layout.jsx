@@ -10,7 +10,6 @@ import { useEffect } from "react";
 import { IoIosLogOut } from "react-icons/io";
 
 const Layout=()=>{
-
   let mynav=useNavigate();
 
 let username= window.localStorage.getItem("username")
@@ -65,7 +64,7 @@ return(
         <li className=""><p className="flex h-2 w-2 absolute items-center justify-center rounded-full  bg-[rgb(18,156,184)] p-3 ml-6 font-black text-xs text-white">{mydata.length}</p> <Link to="cart"><FaCartPlus /> </Link> </li>
         <li className=""> <Link to="AdminLogin"> <RiAdminFill title="adminuser" /></Link></li>
      
-                    {!username?<><li className=""><Link to="UserLogin"> <FaRegUser  title="user"/></Link></li> </>:<><li><button className="" onClick={userlogout}> <IoIosLogOut title="Logout"/></button></li> <li>{username}</li> </> }
+      {!username?<><li className=""><Link to="UserLogin"> <FaRegUser  title="user"/></Link></li> </>:<><li><button className="" onClick={userlogout}> <IoIosLogOut title="Logout"/></button></li> <li>{username}</li> </> }
     </ul>
     </div>
 </div>
@@ -74,16 +73,14 @@ return(
    <li className=""><Link to="home"> Home</Link></li> 
    <li className=""><Link to="shop">Shop</Link></li> 
    <li className=""><Link to="ShopbyCatagry">Shop by Catagry</Link></li> 
-   <li className=""><Link to="SmartWatchs">Smart Watchs</Link></li> 
-   <li className=""><Link to="NewArrivals">New Arrivals</Link></li> 
+   {/* <li className=""><Link to="SmartWatchs">Smart Watchs</Link></li>  */}
+   {/* <li className=""><Link to="NewArrivals">New Arrivals</Link></li>  */}
    <li className=""><Link to="about">About us</Link></li> 
    <li className=""><Link to="Contect">Contect us</Link></li> 
-
-   <li className=""><Link to="allbrands">All Brands</Link></li> 
+   {/* <li className=""><Link to="allbrands">All Brands</Link></li>  */}
    </ul>
     </div>
     <Outlet /> 
-
     <Footer />
     <div style={{ marginTop: "1px" }} >
       <ScrollToTop smooth  style={{ marginTop: "100vh", textAlign:"center",justifyContent:"center", background:"#aaaaaa", padding:"3px"}} />

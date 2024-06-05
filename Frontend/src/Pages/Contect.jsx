@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Contect=()=>{
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
 
     const [formData, setFormData] = useState({
@@ -11,6 +15,7 @@ const Contect=()=>{
       });
     
       const handleChange = (e) => {
+       
         const { name, value } = e.target;
         setFormData({
           ...formData,
@@ -19,7 +24,7 @@ const Contect=()=>{
       };
     
       const handleSubmit =async() => {
-        // e.preventDefault();
+        e.preventDefault();
         // Here you can add your logic for form submission, like sending data to a server or processing it in some way
         let api = "http://localhost:8000/Admin/contect"
         await axios.post(api,formData).then((res) => {

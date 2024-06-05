@@ -4,10 +4,22 @@ const LogingoogleSchema=new mongoose.Schema(
 
     {
     
-        googaleid:String,
-        displayName:String,
-        email:String,
-        image:String,
+        googaleid:{
+            type: String,
+            required: true,
+          },
+        displayName:{
+            type: String,
+            required: true,
+          },
+        email:{
+            type: String,
+            required: true,
+          },
+        image:{
+            type: String,
+            required: true,
+          },
          
     },{timestamps:true}
 );

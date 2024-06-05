@@ -1,5 +1,9 @@
 
 
+body{
+
+  font-family: Arial, Helvetica, sans-serif;
+}
 /* swiper */
 .swiper {
   width: 100%;
@@ -108,7 +112,7 @@ color: green;
 /* ----------------------fotter----------- */
 
 
-
+/* 
 table, td, th {
   border: 2px solid rgb(100, 97, 97);
 }
@@ -123,4 +127,4 @@ th {
   margin: 50px;
   text-align: center;
   height: 70px;
-}
+} */

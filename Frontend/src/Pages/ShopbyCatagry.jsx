@@ -1,9 +1,14 @@
 
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 
 
 const ShopbyCatagry=()=>{
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 return(<>
 <div className="flex  ">
 <div className="w-56 bg-slate-700 h-screen  font-bold  text-white sticky top-28">

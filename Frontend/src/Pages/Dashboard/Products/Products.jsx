@@ -2,6 +2,8 @@
 import axios from "axios";
 import { useState,useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
+import { DataGrid } from '@mui/x-data-grid';
+
 
 const Products=()=>{
   let mynav=useNavigate();
@@ -28,12 +30,7 @@ const Delhand= async(id )=>{
   .then(res =>{alert(res.data)
 
     LoadAllProduct()   ;    
-
-
-  })
-
-  
-
+  })  
 }
 
 const updhand=(id)=>{
@@ -72,8 +69,6 @@ mynav("../UpdateProduct/"+id)
         </>
             )})
 return(<>
-
-
 {AllPro}
 </>)
 

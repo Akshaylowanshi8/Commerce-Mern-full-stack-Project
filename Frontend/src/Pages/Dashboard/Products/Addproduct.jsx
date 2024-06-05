@@ -75,8 +75,6 @@ Product Category :  <select className="bg-gray-50 border border-gray-300 text-gr
         <option value="Samsung">Samsung</option>
         <option value="Nokia">Nokia</option>
         <option value="Apple">Apple</option>
-
-
         <option value="Redmi">Redmi</option>
         <option value="Vivo">Vivo</option>
         <option value="Oppo">Oppo</option>

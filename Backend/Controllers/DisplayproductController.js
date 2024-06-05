@@ -42,7 +42,7 @@ const  LoadhotnewProduct=async(req,res)=>{
 
             const  LoadAllProduct=async(req,res)=>{
                 try {
-                     let mydata=await AddProModel.find().sort({_id:-1})
+                     let mydata=await AddProModel.find()
                      res.status(200).send(mydata)   
                     //   console.log(mydata);
                     } catch (error) {

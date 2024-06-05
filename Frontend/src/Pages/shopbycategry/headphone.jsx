@@ -7,6 +7,10 @@ import { useSelector,useDispatch } from "react-redux";
 
 const Headphones=()=>{
 
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     const dispatch=useDispatch();
     const mydata= useSelector((state)=>state.cartProduct.cart)
     // console.log(mydata);

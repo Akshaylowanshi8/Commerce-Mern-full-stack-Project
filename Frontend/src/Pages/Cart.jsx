@@ -9,6 +9,12 @@ const Cart=()=>{
 
 let mynav= useNavigate()
   const chackoutbtn=()=>{
+
+    if(TotalPrice===0)
+      { window.location.reload();
+        alert("please buy sum products")
+      }
+
 mynav("/chackout")
   }
 const mydata= useSelector((state)=>state.cartProduct.cart)

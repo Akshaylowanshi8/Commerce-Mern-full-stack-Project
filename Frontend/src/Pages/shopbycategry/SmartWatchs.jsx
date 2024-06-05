@@ -3,9 +3,11 @@ import axios from "axios";
 import { useState,useEffect } from "react";
 import { useSelector,useDispatch } from "react-redux";
 
-
 const SmartWatchs=()=>{
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
   const dispatch=useDispatch();
   const mydata= useSelector((state)=>state.cartProduct.cart)

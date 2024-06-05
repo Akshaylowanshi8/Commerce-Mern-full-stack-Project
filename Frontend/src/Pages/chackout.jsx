@@ -1,9 +1,12 @@
 
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector} from "react-redux";
 
 const Chackout=()=>{
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
     const mydata= useSelector((state)=>state.cartProduct.cart)
     let totalAmount=0;
     let productDetails="";
@@ -41,6 +44,7 @@ const pro =mydata.map((key) =>{
         pinCode: '',
         mobile:""
       });
+      const [error, setError] = useState('');
       const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -83,7 +87,8 @@ const options = {
 const razor = new window.Razorpay(options);
 razor.open();
 };
-const handlePay =async()=>{
+const handlePay =async(e)=>{
+  e.preventDefault();
   try {
     const orderURL = "http://localhost:8000/payment/orders";
     const {data} = await axios.post(orderURL,{amount: myproduct.price, productitems:myproduct.name,...formData } );
@@ -94,14 +99,14 @@ const handlePay =async()=>{
   }
 }
 return(<>
-<div className="flex mt-0">
- <form  className="bg-gray-100 dark:bg-gray-900 w-1/2">
+<div className="">
+ <form  className="bg-gray-100  flex mt-0 dark:bg-gray-900 " onSubmit={handlePay}>
       <div className="w-full max-w-3xl mx-auto p-8">
       <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md border dark:border-gray-700">
       <h1 class="text-2xl font-bold mb-6">Shipping Address</h1>
       <div className="">
         <label htmlFor="fullName" className="block text-gray-700 dark:text-white mb-1">Full Name</label>
-        <input type="text" required id="fullName" name="fullName" value={formData.fullName} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
+        <input type="text"  id="fullName" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"  />
       </div>
       <div className="mb-4">
         <label htmlFor="address"  className="block text-gray-700 dark:text-white mb-1">Address</label>
@@ -117,15 +122,15 @@ return(<>
       </div>
       <div className="mb-4">
         <label htmlFor="pinCode" className="block text-gray-700 dark:text-white mb-1">Pin Code</label>
-        <input type="text" required id="pinCode" name="pinCode" value={formData.pinCode} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
+        <input type="number" required id="pinCode" name="pinCode" value={formData.pinCode} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
       </div>
       <div className="mb-4">
         <label htmlFor="mobile" className="block text-gray-700 dark:text-white mb-1">Mobile</label>
-        <input type="text" required id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
+        <input type="number" required id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none" />
       </div>
     </div>
       </div>
-    </form>
+  
     {/* ................form end ............ */}
     <div class="flex flex-col justify-center items-center min-h-screen ">
     <div class="bg-gray-100 rounded-lg shadow-lg h-full p-6 w-">
@@ -146,12 +151,14 @@ return(<>
             <span class="font-bold"> {totalAmount} </span>
         </div>
         <div class="flex justify-center mt-6">
+        {error && <p style={{ color: 'red' }}>{error}</p>}
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handlePay}
+          type='submit'
             >PayNow</button>
         </div>
     </div>
 </div>
+  </form>
       </div>
 </>)
 }
